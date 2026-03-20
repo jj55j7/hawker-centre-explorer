@@ -1,8 +1,8 @@
 # 🍜 Hawker Centre Explorer
 
-> An interactive geospatial web application for discovering Singapore's hawker centres — built as part of the Topo EH-AI Consulting Software Developer Intern Technical Assessment 2026.
+> An interactive geospatial web application for discovering Singapore's hawker centres.
 
-**[Live Demo →](https://hawker-centre-explorer.vercel.app)**  &nbsp;|&nbsp;  **[API Docs →](https://hawker-api.onrender.com/docs)**
+**[Live Demo →](https://hawker-centre-explorer.vercel.app)**  &nbsp;|&nbsp;  **[API Docs →](https://hawker-api.onrender.com/docs)** &nbsp;|&nbsp; **[Data Source →](https://data.gov.sg/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view)** &nbsp;|&nbsp;
 
 ---
 
@@ -11,6 +11,15 @@
 Search, filter, and explore all of Singapore's hawker centres on an interactive map. Click a marker to see the name, address, and postal code. Use **Near Me** to instantly find the closest centres to your location.
 
 ---
+
+## Map View — All Hawker Centres
+
+<img width="3019" height="1720" alt="image" src="https://github.com/user-attachments/assets/43772d89-4820-4706-9faa-90fbde6720fd" />
+
+## Near Me
+
+<img width="3020" height="1725" alt="image" src="https://github.com/user-attachments/assets/41b50074-b556-4abf-9acf-aba781d436d2" />
+
 
 ## Architecture
 
@@ -227,5 +236,3 @@ Fuse.js threshold is set to 0.35 — permissive enough to handle abbreviations l
 The frontend tries the FastAPI backend first (via `/api/hawkers`). If it gets no response within 4 seconds, it falls back to calling data.gov.sg directly. This means the app is resilient — it keeps working even if the backend goes to sleep on Render's free tier.
 
 ---
-
-*Built by [Your Name] · March 2026 · Singapore*
