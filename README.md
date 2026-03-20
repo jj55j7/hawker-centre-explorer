@@ -2,7 +2,7 @@
 
 > An interactive geospatial web application for discovering Singapore's hawker centres — built as part of the Topo EH-AI Consulting Software Developer Intern Technical Assessment 2026.
 
-**[Live Demo →](https://hawker-centre-explorer.vercel.app)**  &nbsp;|&nbsp;  **[API Docs →](https://hawker-api.onrender.com/docs)**
+**[Live Demo →](https://hawker-centre-explorer.vercel.app)**  &nbsp;|&nbsp;  **[API Docs →](https://hawker-api.onrender.com/docs)** &nbsp;|&nbsp; **[Data Source →](https://data.gov.sg/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view)** &nbsp;|&nbsp;
 
 ---
 
