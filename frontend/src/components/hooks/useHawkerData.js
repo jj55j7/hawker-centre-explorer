@@ -1,17 +1,13 @@
 /**
- * useHawkerData.js
+ * Data fetching hook — three-source strategy:
  *
- * Fetches hawker centre data. Uses a two-source strategy:
+ * 1. Local GeoJSON  → /public/hawkers.geojson (bundled, instant load)
+ * 2. FastAPI backend → GET /api/hawkers        (Python + Supabase)
+ * 3. data.gov.sg API → GeoJSON poll-download   (live fallback)
  *
- *  1. PRIMARY   → our own FastAPI backend  (GET /api/hawkers)
- *     This is set via the VITE_API_URL env variable.
- *     In development Vite proxies /api → localhost:8000 automatically.
- *
- *  2. FALLBACK  → data.gov.sg public API directly
- *     Used when the backend is not running (pure-frontend mode).
- *
- * This means the frontend works standalone for the MVP, and upgrading
- * to use the backend requires zero code changes — just running it.
+ * External APIs used:
+ *  - https://api-open.data.gov.sg (Singapore Open Data)
+ *  - Supabase REST API (via useFavourites hook)
  */
 
 import { useState, useEffect } from 'react'
