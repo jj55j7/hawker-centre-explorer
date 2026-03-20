@@ -54,15 +54,13 @@ hawker-centre-explorer/
 ### Data flow
 
 ```
-data.gov.sg GeoJSON (live dataset)
+Local GeoJSON (public/hawkers.geojson)   ← primary source, bundled
+        ↓ fallback if missing
+  FastAPI backend  (localhost:8000)       ← Python + Supabase
+        ↓ fallback if not running  
+  data.gov.sg GeoJSON API                ← live external API
         ↓
-  process_data.py       ← ETL pipeline: extract → transform → load
-        ↓
-    Supabase DB          ← hawker data + user favourites
-        ↓
-  FastAPI backend        ← REST API endpoints
-        ↓
-  React frontend         ← map, sidebar, dashboard, favourites
+  React frontend                          ← renders everything
 ```
 
 **Resilience:** the frontend loads from a bundled local GeoJSON file first (zero network calls), then tries the FastAPI backend, then falls back to the live data.gov.sg API — so the app works at every stage of deployment.
