@@ -1,2 +1,4 @@
 frontend/.env
 .env
+frontend/public/poll.json
+poll.json
