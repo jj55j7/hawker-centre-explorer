@@ -35,6 +35,12 @@ Hawker Centre Explorer lets users discover, search, filter, and save Singapore's
 ### Favourites Tab
 <img width="1512" height="862" alt="Screenshot 2026-03-20 at 5 12 48 PM" src="https://github.com/user-attachments/assets/10229cf8-4d67-40e0-9979-48deb6eb227b" />
 
+### FastAPI Interactive Docs 
+<img width="1512" height="857" alt="Screenshot 2026-03-20 at 6 04 25 PM" src="https://github.com/user-attachments/assets/c63730e5-82b1-402d-9a7c-98bac548aeb9" />
+
+### Search Query FastAPI 
+<img width="1512" height="857" alt="Screenshot 2026-03-20 at 6 06 09 PM" src="https://github.com/user-attachments/assets/dab5835f-3237-4a90-b62e-b495c5b88dec" />
+
 ---
 
 ## Architecture
