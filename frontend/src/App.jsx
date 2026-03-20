@@ -6,8 +6,12 @@ import { closestN }       from './utils/distanceCalculator'
 import Sidebar    from './components/Sidebar/Sidebar'
 import HawkerMap  from './components/Map/HawkerMap'
 import StatsPanel from './components/Dashboard/StatsPanel'
+import { useFavourites } from './hooks/useFavourites'
 
 export default function App() {
+  const { favourites, toggleFavourite } = useFavourites()
+// pass as props to HawkerMap and Sidebar
+
   const { hawkers, loading, error } = useHawkerData()
 
   const {
@@ -69,6 +73,8 @@ export default function App() {
           selectedHawker={selectedHawker}
           onSelectHawker={setSelectedHawker}
           userPosition={position}
+          favourites={favourites}
+          onToggleFavourite={toggleFavourite}
         />
         {!loading && !error && (
           <StatsPanel
