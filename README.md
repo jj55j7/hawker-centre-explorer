@@ -267,7 +267,7 @@ Interactive docs at `http://localhost:8000/docs`.
 
 **GeoJSON coordinate order** — GeoJSON stores coordinates as `[longitude, latitude]`, which is the reverse of Leaflet's `[latitude, longitude]`. The `normaliseFeature` function explicitly swaps them with a comment to prevent future confusion.
 
-**Three-source data fallback** — `useHawkerData` tries sources in order: (1) local `hawkers.geojson` bundled with the app, (2) the FastAPI backend at `/api/hawkers`, (3) the live data.gov.sg API. This means the app works during local development without a backend, on Vercel without the Render backend being awake, and degrades gracefully if all else fails.
+**Three-source data fallback** — `useHawkerData` loads from `public/hawkers.geojson` first (zero network calls, works offline). If missing it tries the FastAPI backend, then falls back to data.gov.sg directly. The backend independently fetches the same GeoJSON via a two-step poll-download API call, normalises features identically to the frontend, and serves them through typed Pydantic models.
 
 **Favourites without login** — Favourites use an anonymous session ID generated with `crypto.randomUUID()` and stored in `localStorage` on first visit. This ID is sent with every Supabase query so favourites persist across page reloads in the same browser with zero friction. Different devices get a fresh ID.
 
