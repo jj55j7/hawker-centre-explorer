@@ -2,7 +2,7 @@
 
 > An interactive geospatial web application for discovering all of Singapore's hawker centres.
 
-**[Live Demo →](https://hawker-centre-explorer.vercel.app)** &nbsp;|&nbsp; **[API Docs →](https://hawker-api.onrender.com/docs)** &nbsp;|&nbsp; **[Data Source →](https://data.gov.sg/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view)**
+**[Live Demo →](https://hawker-centre-explorer.vercel.app)** &nbsp;|&nbsp; **[API Docs →](http://localhost:8000/docs)** *(run backend locally to access)* &nbsp;|&nbsp; **[Data Source →](https://data.gov.sg/datasets/d_4a086da0a5553be1d89383cd90d07ecd/view)**
 
 ---
 
