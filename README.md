@@ -236,5 +236,3 @@ Fuse.js threshold is set to 0.35 — permissive enough to handle abbreviations l
 The frontend tries the FastAPI backend first (via `/api/hawkers`). If it gets no response within 4 seconds, it falls back to calling data.gov.sg directly. This means the app is resilient — it keeps working even if the backend goes to sleep on Render's free tier.
 
 ---
-
-*Built by [Your Name] · March 2026 · Singapore*
